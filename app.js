@@ -29,7 +29,7 @@ var Controller = {
 	},
 	
 	find: function(req, res){
-		var Model = mongoose.model('Beer', BeerSchema), query ={};
+		var query ={};
 
 		Model.find(query, function (err, data){
 			if (err){
@@ -45,7 +45,7 @@ var Controller = {
 	},
 	
 	update: function(req, res){
-		var Model = mongoose.model('Beer', BeerSchema), query = {name: /skol/i };
+		var query = {name: /skol/i };
 
 		var mod = {
 			name: 'Brahma',
@@ -72,7 +72,7 @@ var Controller = {
 			
 	},
 	delete: function(req, res){
-		var Model = mongoose.model('Beer', BeerSchema), query = {name: /brahma/i };
+		var query = {name: /Skol/i };
 
 		Model.remove(query, function (err, data){
 			if (err){
